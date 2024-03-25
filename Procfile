@@ -1,1 +1,1 @@
-web: ./cmd/sysbietec
+web: ./cmd/sysbietec.exe
