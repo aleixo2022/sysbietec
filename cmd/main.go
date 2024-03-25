@@ -12,6 +12,12 @@ func main() {
 	clientSecret := os.Getenv("CLIENT_SECRET")
 	redirectUri := os.Getenv("REDIRECT_URI")
 
+	// Handler para a página inicial
+	http.HandleFunc("/home", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "<h1>Bem-vindo à página inicial do Sysbietec!</h1>")
+	})
+
+	// Handler para o callback de autenticação
 	http.HandleFunc("/callback", func(w http.ResponseWriter, r *http.Request) {
 		code := r.URL.Query().Get("code")
 		if code == "" {
