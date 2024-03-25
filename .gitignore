@@ -9,7 +9,7 @@
 /vendor/
 
 # Arquivos de configuração sensíveis
-*.env
+#*.env
 
 # Arquivos temporários
 *.tmp
