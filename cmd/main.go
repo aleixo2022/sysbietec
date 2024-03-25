@@ -35,8 +35,12 @@ func main() {
 		fmt.Fprintf(w, "Access Token: %s", accessToken)
 	})
 
-	fmt.Println("Servidor iniciado na porta 8080")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" // Porta padrão se não estiver definida
+	}
+	fmt.Printf("Servidor iniciado na porta %s\n", port)
+	if err := http.ListenAndServe(":"+port, nil); err != nil {
 		fmt.Printf("Erro ao iniciar o servidor: %v\n", err)
 	}
 }
