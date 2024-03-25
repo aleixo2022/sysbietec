@@ -1,0 +1,39 @@
+# Binários compilados
+/bin/
+/pkg/
+
+# Arquivos de depuração
+*.out
+
+# Dependências (com Go Modules, a pasta vendor/ é geralmente desnecessária)
+/vendor/
+
+# Arquivos de configuração sensíveis
+*.env
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Diretórios de IDE
+.idea/
+.vscode/
+
+# Arquivos de cache do Go
+*.test
+*.exe
+*.test.exe
+*.cover
+*.prof
+
+# Diretórios de cache do Go
+Godeps/
+_build/
+**/node_modules/
+
+# Arquivos de cache de teste
+/testdata/
